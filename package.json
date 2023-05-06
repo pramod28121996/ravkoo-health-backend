@@ -1,0 +1,30 @@
+{
+  "name": "ravkoo-health-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pramod28121996/ravkoo-health-backend.git"
+  },
+  "author": "pramod",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pramod28121996/ravkoo-health-backend/issues"
+  },
+  "homepage": "https://github.com/pramod28121996/ravkoo-health-backend#readme",
+  "dependencies": {
+    "axios": "^1.4.0",
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.0.3",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.22"
+  }
+}
