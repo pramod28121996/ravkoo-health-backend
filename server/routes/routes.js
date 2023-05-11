@@ -10,6 +10,11 @@ const services = require("../services/render");
  */
 route.get("/", services.homeRoutes);
 /**
+ * @description Root Route
+ * @member GET item/:id
+ */
+route.get("/item/:id", services.getItemById);
+/**
  * @description Get Token Route
  * @member GET /get-token
  */

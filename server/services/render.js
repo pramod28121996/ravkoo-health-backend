@@ -12,6 +12,18 @@ exports.homeRoutes = async (req, res) => {
     });
 };
 
+exports.getItemById = async (req, res) => {
+  const { id } = req.params;
+  await axios
+    .get(`https://jsonplaceholder.typicode.com/posts/${id}`)
+    .then((response) => {
+      res.render("show", { products: response.data });
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+};
+
 exports.itemsRoutes = async (req, res) => {
   await axios
     .get("https://jsonplaceholder.typicode.com/posts")
@@ -36,10 +48,10 @@ exports.duplicateNumber = (req, res) => {
   const numMap = {};
 
   for (let i = 0; i < data.length; i++) {
-    if (numMap[data[i]] !== undefined) {      
+    if (numMap[data[i]] !== undefined) {
       res.send({ data: data[i] });
     }
     numMap[data[i]] = i;
   }
-  res.send({ data:"There is no any duplicate number in array"  });
+  res.send({ data: "There is no any duplicate number in array" });
 };
