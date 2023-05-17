@@ -34,7 +34,6 @@ exports.itemsRoutes = async (req, res) => {
       console.log(error);
     });
 };
-
 exports.getToken = (req, res) => {
   const email = "text@gmail.com";
   const token = jwt.sign({ user_id: 1, email }, process.env.TOKEN_KEY, {
